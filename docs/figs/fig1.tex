@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+        \draw (2,2) rectangle (5,5);                \draw (2.75,4) node{$D$};
+        \draw (4.5,3) node{$Q'$};
+        \draw (5,3) -- (7,3);         
+        \draw (4.5,4) node{$Q$}; 
+        \draw (5,4) -- (7,4);        
+        \draw (7,2) rectangle (10,5);       
+        \draw (7.75,4) node{$1$};           
+        \draw (7.75,3) node{$0$};                   \draw (10,3.5) -- (11,3.5);     
+        \draw (11,3.5) -- (11,6.8);
+        \draw (11,6.8) -- (5,6.8);
+        \draw (6,4) -- (6,6.25);
+        \draw (6,6.25) -- (5,6.25);
+        \draw (0,3) node[above]{$CLK$} -- (2,3);
+        \draw (9,0) node{$A$};
+        \draw (9,0.5) -- (9,2);
+        \draw (9,0.5) [->] (9,2);
+        \draw (2,4) -- (0,4);
+        \draw (0,4) -- (0,6.5);
+        \draw (0,6.5) -- (4,6.5);
+        \node[nand port][xscale=-1] (nanda) at (3.75,6.5){};
+\end{tikzpicture}

@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{circuitikz}
+\usepackage{listings}
+
+\usetikzlibrary{arrows,shapes,automata,petri,positioning,calc}
+\usetikzlibrary{shapes.geometric}
+\lstset{
+ language=C++,
+ basicstyle=\ttfamily\footnotesize,
+ breaklines=true,
+ frame=lines
+ }
+\title{ASSIGNMENT}
+\date{April 2023}
+\author{Pavangoud Manchanpally \\pavangoud461@gmail.com\\FWC22125\\IIT Hyderabad-Future Wireless Communication }
+
+\begin{document}
+\maketitle
+ \tableofcontents
+
+ \pagebreak
+\section{Problem}
+ {GATE EC-2019}\\
+ Q.39. The state transition diagram for the circuit shown is
+\begin{figure}[h]
+	 \centering
+	 \input{figs/fig1.tex}
+\end{figure}
+
+\begin{enumerate}
+\item{(A)}
+        \begin{figure}[h]
+	        \centering
+	        \input{figs/fig2.tex}
+        \end{figure}
+\pagebreak
+\item{(B)}
+        \begin{figure}[h]
+         	\centering
+	        \input{figs/fig3.tex}
+        \end{figure}
+\item{(C)}
+	\begin{figure}[h]
+		\centering
+		\input{figs/fig4.tex}
+	\end{figure}
+\item{(D)}
+	\begin{figure}[h]
+		\centering
+		\input{figs/fig5.tex}
+	\end{figure}
+\end{enumerate}
+\pagebreak
+\section{Components}
+ \begin{table}[h]
+  \centering
+   \begin{tabular}{|c|c|c|}
+   \hline
+   \textbf{Component}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+ArduinoUNO &  & 1 \\  
+\hline
+JumperWires& M-M & 10 \\ 
+\hline
+Breadboard &  & 1 \\
+\hline
+LED & &1 \\
+\hline
+Resistor &220ohms & 1\\
+\hline
+   \end{tabular}
+   \end{table}
+\section{Reduction of logical circuit}
+The output of 2:1 mux is P.\\
+Now , $P=AQ+A'Q'$\\
+$D=(Q.P)'$\\
+$D=(Q(AQ+A'Q'))'$\\
+ $D=(A(Q.Q)+(A'Q'Q))'$
+ $D=(AQ)'$\\
+ The equation after reducing the logical circuit is:\\
+ $D=(AQ)'$\\
+
+ \section{Truth table}
+ \begin{table}[h]
+  \centering
+   \begin{tabular}{|c|c|c|}
+   \hline
+   Q & A & Q'\\
+   \hline
+   0 & 0 & 1\\
+   \hline
+   1 & 0 & 0\\
+   \hline
+   1 & 1 & 0\\
+   \hline
+   0 & 1 & 1\\
+   \hline
+   \end{tabular}
+   \end{table}
+\section{Next stages}
+\begin{figure}[h]
+	\centering
+	\input{figs/fig6.tex}
+	\caption{Stage 1}
+\end{figure}
+\pagebreak
+\begin{figure}[h]
+        \centering                                  \input{figs/fig7.tex}
+        \caption{Stage 2}
+\end{figure}
+\begin{figure}[h]
+        \centering
+	\input{figs/fig8.tex}
+	\caption{Stage 3}
+\end{figure}
+\pagebreak
+\begin{figure}[h]
+        \centering                                  \input{figs/fig9.tex}
+        \caption{Stage 4}
+\end{figure} 
+
+\section{implementation}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+\hline
+\textbf{Arduino pin} & \textbf{INPUT} & \textbf{OUTPUT}\\
+\hline
+2 & Q &\\
+\hline
+3 & A &\\
+\hline
+8 & & D\\
+\hline
+  \end{tabular}
+\end{table}
+\section{Procedure}
+   1. Connect the circuit as per the above table.\\
+   2. Connect the Output pin D to the LED.\\
+   3. Connect the other end of the LED to the Ground terminal.\\
+   4. Connect inputs to Vcc for logic 1,ground for logic 0.\\
+   5. Execute the circuits using the below code.\\
+   \begin{table}[h]
+	   \centering
+	   \begin{tabular}{|c|}
+	   \hline
+	   https://github.com/pavangoudmanchanpally/ec392019/blob/main/code/ec392019.cpp\\
+	   \hline
+	   \end{tabular}
+   \end{table}\\
+   6. Change the values of Q and A in the code and verify the Truth table .\\
+
+ 
+
+\end{document}
+

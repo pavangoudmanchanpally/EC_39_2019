@@ -1,0 +1,7 @@
+\begin{tikzpicture}[node distance=3cm]
+    \node[circle,draw,minimum width=2cm](s0){$Q=0$};
+    \node[circle,draw,minimum width=2cm](s1)[right=of s0]{$Q=1$};
+    \path(s1)edge[loop above]node[above]{$A=0$} (s1);
+    \path(s0)[->]edge[bend right=-45]node[above]{$A=0$}(s1);
+    \path(s1)[->]edge[bend left=30]node[below]{$A=1$}(s0);
+\end{tikzpicture}

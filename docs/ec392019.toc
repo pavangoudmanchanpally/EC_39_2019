@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Problem}{2}{}%
+\contentsline {section}{\numberline {2}Components}{4}{}%
+\contentsline {section}{\numberline {3}Reduction of logical circuit}{4}{}%
+\contentsline {section}{\numberline {4}Truth table}{4}{}%
+\contentsline {section}{\numberline {5}Next stages}{4}{}%
+\contentsline {section}{\numberline {6}implementation}{6}{}%
+\contentsline {section}{\numberline {7}Procedure}{6}{}%
